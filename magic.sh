@@ -17,3 +17,6 @@ fi
 # download patch
 wget -O "0001-DNM-libqsap_sdk-Suppress-warnings.patch" $PATCH
 echo "Successfully downloaded $PATCH"
+
+# shallow clone the arm-eabi-4.8 prebuilt toolchain right from AOSP git repo.
+git clone --depth=1 https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 prebuilts/gcc/linux-x86/arm/arm-eabi-4.8
