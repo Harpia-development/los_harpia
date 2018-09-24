@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+	<!-- Device -->
+	<project name="Harpia-development/device_motorola_harpia" path="device/motorola/harpia" remote="github" revision="9" />
+	<project name="Harpia-development/device_motorola_msm8916-common" path="device/motorola/msm8916-common" remote="github" revision="9" />
+	<project name="Harpia-development/kernel_harpia.git" path="kernel/motorola/msm8916" remote="github" revision="9" />
+	<project name="Harpia-development/vendor_harpia" path="vendor/motorola" remote="github" revision="o" />
+
+	<!-- LOS STAGING REPOS -->
+	<project path="hardware/qcom/fm" name="LineageOS/android_hardware_qcom_fm" groups="qcom,qcom_fm" />
+	<project path="packages/apps/FMRadio" name="LineageOS/android_packages_apps_FMRadio" />
+	
+	<project path="packages/overlays/Lineage" name="LineageOS/android_packages_overlays_Lineage" />
+	<project path="system/qcom" name="LineageOS/android_system_qcom" groups="qcom" remote="github" revision="lineage-15.1" />
+
+	<!-- Text Classifier -->
+	<remove-project name="platform/external/libtextclassifier" path="external/libtextclassifier" remote="github" revision="lineage-15.1" />
+	<project name="LineageOS/android_external_libtextclassifier" path="external/libtextclassifier" remote="github" revision="lineage-15.1" />
+
+	<!-- Linaro 7.3 kernel toolchain -->
+	<project name="dev-harsh1998/GCC_BUILDS" path="prebuilts/gcc/linux-x86/arm/arm-eabi-7.3" remote="github" revision="master" />
+	
+	<!-- Boringssl -->
+	<project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="lineage-15.1" />
+	<project name="LineageOS/android_external_bson" path="external/bson" remote="github" revision="lineage-15.1" />
+	
+</manifest>
