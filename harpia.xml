@@ -14,10 +14,6 @@
 	<project path="packages/overlays/Lineage" name="LineageOS/android_packages_overlays_Lineage" />
 	<project path="system/qcom" name="LineageOS/android_system_qcom" groups="qcom" remote="github" revision="lineage-15.1" />
 
-	<!-- Text Classifier -->
-	<remove-project name="platform/external/libtextclassifier" path="external/libtextclassifier" remote="github" revision="lineage-15.1" />
-	<project name="LineageOS/android_external_libtextclassifier" path="external/libtextclassifier" remote="github" revision="lineage-15.1" />
-
 	<!-- Linaro 7.3 kernel toolchain -->
 	<project name="dev-harsh1998/GCC_BUILDS" path="prebuilts/gcc/linux-x86/arm/arm-eabi-7.3" remote="github" revision="master" />
 	
