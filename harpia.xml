@@ -21,8 +21,4 @@
 	<project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="lineage-15.1" />
 	<project name="LineageOS/android_external_bson" path="external/bson" remote="github" revision="lineage-15.1" />
 	
-	<!-- Build the kernel -->
-	<remove-project name="platform/build" />
-	<project name="Harpia-development/platform_build" path="build/make" remote="github" revision="aosp_9" />
-
 </manifest>
