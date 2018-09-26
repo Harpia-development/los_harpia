@@ -9,6 +9,9 @@ TOP=${PWD}
 cd system/qcom
 git am -3 $TOP/0001-DNM-libqsap_sdk-Suppress-warnings.patch
 cd $TOP
+cd external/tinycompress
+git apply $TOP/0003-tinycompress-Fix-compilation-on-old-targets.patch
+cd $TOP
 
 #############################################################
 # CHERRYPICKS                                               #

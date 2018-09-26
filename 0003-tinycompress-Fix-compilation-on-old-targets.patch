@@ -1,0 +1,41 @@
+From b5cd4f2401168b8ffcfc2e29f16e92cd350e34de Mon Sep 17 00:00:00 2001
+From: Steve Kondik <steve@cyngn.com>
+Date: Mon, 12 Oct 2015 12:49:32 -1000
+Subject: [PATCH 3/3] tinycompress: Fix compilation on old targets
+
+ * Exclude code for codec-specific data if kernel support is missing.
+
+Change-Id: I088e0244b01b01f21b80d9478407a185c34afbe8
+---
+ compress.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+diff --git a/compress.c b/compress.c
+index 8fa1386..1cdf297 100644
+--- a/compress.c
++++ b/compress.c
+@@ -572,6 +572,7 @@ int compress_set_gapless_metadata(struct compress *compress,
+ 	return 0;
+ }
+ 
++#if defined(SNDRV_COMPRESS_SET_NEXT_TRACK_PARAM)
+ int compress_set_next_track_param(struct compress *compress,
+ 	union snd_codec_options *codec_options)
+ {
+@@ -582,6 +583,13 @@ int compress_set_next_track_param(struct compress *compress,
+ 		return oops(compress, errno, "cannot set next track params\n");
+ 	return 0;
+ }
++#else
++int compress_set_next_track_param(struct compress *compress __unused,
++	union snd_codec_options *codec_options __unused)
++{
++	return 0;
++}
++#endif
+ 
+ bool is_codec_supported(unsigned int card, unsigned int device,
+ 		unsigned int flags, struct snd_codec *codec)
+-- 
+2.17.1
+
