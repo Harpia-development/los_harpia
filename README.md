@@ -34,10 +34,6 @@ Then to sync up:
 
      repo sync  --force-sync --force-broken --current-branch --no-tags --no-clone-bundle --optimized-fetch --prune -j$(nproc --all)
      
-Move magic band again	
-	
-	bash patch.sh
-	
 Do this everything after sync for applying patches.
 	
 

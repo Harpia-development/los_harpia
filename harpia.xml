@@ -4,12 +4,11 @@
 	<!-- Device -->
 	<project name="Harpia-development/device_motorola_harpia" path="device/motorola/harpia" remote="github" revision="9" />
 	<project name="Harpia-development/device_motorola_msm8916-common" path="device/motorola/msm8916-common" remote="github" revision="9" />
-	<project name="Harpia-development/kernel_harpia.git" path="kernel/motorola/msm8916" remote="github" revision="9" />
-	<project name="Harpia-development/vendor_harpia" path="vendor/motorola" remote="github" revision="o" />
+	<project name="Harpia-development/kernel_harpia.git" path="kernel/motorola/msm8916" remote="github" revision="thermal" />
+	<project name="Harpia-development/vendor_harpia" path="vendor/motorola" remote="github" revision="9_hdr" />
 
 	<!-- LOS STAGING REPOS -->
 	<project path="hardware/qcom/fm" name="LineageOS/android_hardware_qcom_fm" remote="github" revision="lineage-16.0" />
-	<project path="packages/apps/FMRadio" name="LineageOS/android_packages_apps_FMRadio" remote="github" revision="lineage-16.0" />
 	
 	<project path="system/qcom" name="LineageOS/android_system_qcom" groups="qcom" remote="github" revision="lineage-15.1" />
 
@@ -19,5 +18,35 @@
 	<!-- Boringssl -->
 	<project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="lineage-15.1" />
 	<project name="LineageOS/android_external_bson" path="external/bson" remote="github" revision="lineage-15.1" />
+
+	<!-- SELinux -->
+	<remove-project name="LineageOS/android_system_sepolicy" />
+	<project name="Harpia-development/android_system_sepolicy" path="system/sepolicy" remote="github" revision="lineage-16.0" />
+	<remove-project name="LineageOS/android_device_qcom_sepolicy-legacy" />
+	<project name="Harpia-development/android_device_qcom_sepolicy-legacy" path="device/qcom/sepolicy-legacy" remote="github" revision="lineage-16.0" />
+
+	<!-- Fixes missing deps in "display-caf" -->
+	<remove-project name="LineageOS/android_hardware_qcom_display" />
+	<project name="PixysOS/hardware_qcom_display" path="hardware/qcom/display-caf/msm8916" remote="github" revision="pie-msm8916" />
+
+	<!-- Fixes broken compilation in "media-caf" -->
+	<remove-project name="LineageOS/android_hardware_qcom_media" />
+	<project name="PixysOS/hardware_qcom_media" path="hardware/qcom/media-caf/msm8916" remote="github" revision="pie-msm8916" />
+
+	<!-- Fixes broken compilation in "audio-caf" -->
+	<remove-project name="LineageOS/android_hardware_qcom_audio" />
+	<project name="A6020-pie/platform_hardware_qcom_audio" path="hardware/qcom/audio-caf/msm8916" remote="github" revision="pie-caf-msm8916" />
+
+	<!-- Fixes missing deps in "bt-caf" -->
+	<remove-project name="LineageOS/android_hardware_qcom_bt" />
+	<project name="PixysOS/hardware_qcom_bt" path="hardware/qcom/bt-caf" remote="github" revision="pie-caf" />
+	
+	<!-- Fixes missing deps in "tinycompress" -->
+	<remove-project name="LineageOS/android_external_tinycompress" />
+	<project name="PixysOS/external_tinycompress" path="external/tinycompress" remote="github" revision="pie" />
+
+	<!-- Fixes for errors in softap -->
+	<remove-project name="LineageOS/android_system_qcom" />
+	<project name="Harpia-development/android_system_qcom" path="system/qcom" remote="github" revision="lineage-16.0" />
 	
 </manifest>

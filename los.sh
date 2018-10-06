@@ -9,7 +9,7 @@ URL="https://github.com/Harpia-development/los_harpia"
 # Clean up existing files if present
 
 rm -rf  "$A"
-rm "$B" "$C" "$D" "$E" "$F"
+rm "$B" "$C" "$D" "$F"
 
 echo "Fetching random shit"
 git clone $URL
