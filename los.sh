@@ -1,18 +1,10 @@
-A="los_harpia"
-B="los.sh"
-C="harpia.xml"
-D="magic.sh"
-E="patch.sh"
-F="README.md"
-URL="https://github.com/Harpia-development/los_harpia"
-
 # Clean up existing files if present
 
-rm -rf  "$A"
-rm "$B" "$C" "$D" "$F"
+rm -rf  'los_harpia'
+rm 'los.sh' 'harpia.xml' 'magic.sh' 'README.md'
 
 echo "Fetching random shit"
-git clone $URL
+git clone 'https://github.com/Harpia-development/los_harpia'
 cd los_harpia
 cp * ../
 cd ../
