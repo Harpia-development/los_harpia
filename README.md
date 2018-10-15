@@ -4,12 +4,12 @@ LineageOS Pie (16.X) for Harpia
 Current Status
 --------------
 
-IDK
+Everything is working.
 
 Download
 --------
 
-IDK
+You can grab some links from the [XDA thread](https://forum.xda-developers.com/g4-play/development/rom-lineageos-16-0-t3853758) or just join us at Telegram in the [Prebuilts Delivery Channel](https://t.me/romdelivery) or the [Dev support and off-topic group](https://t.me/somefeak) (previously SomeFeaK group).
 
 Build Instructions
 ------------------
