@@ -15,21 +15,10 @@
 	<project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="lineage-15.1" />
 	<project name="LineageOS/android_external_bson" path="external/bson" remote="github" revision="lineage-15.1" />
 
-	<!-- SELinux -->
-	<remove-project name="LineageOS/android_system_sepolicy" />
-	<project name="Harpia-development/android_system_sepolicy" path="system/sepolicy" remote="github" revision="lineage-16.0" />
-	<remove-project name="LineageOS/android_device_qcom_sepolicy-legacy" />
-	<project name="Harpia-development/android_device_qcom_sepolicy-legacy" path="device/qcom/sepolicy-legacy" remote="github" revision="lineage-16.0" />
-
 	<!-- LOS Staging repos -->
-        <project path="hardware/qcom/fm" name="LineageOS/android_hardware_qcom_fm" groups="qcom,qcom_fm" />
-
         <project path="packages/overlays/Lineage" name="LineageOS/android_packages_overlays_Lineage" />
 
         <project path="system/qcom" name="LineageOS/android_system_qcom" groups="qcom" remote="github" revision="lineage-15.1" />
-
-        <remove-project name="platform/packages/apps/SettingsIntelligence" />
-	<project path="packages/apps/SettingsIntelligence" name="LineageOS/android_packages_apps_SettingsIntelligence" groups="pdk-fs" />
 
 	<!-- Fixes missing deps in "display-caf" -->
 	<remove-project name="LineageOS/android_hardware_qcom_display" />
@@ -58,5 +47,8 @@
 	<!-- Jelly webview is mostly broken, switch to Browser2. -->
 	<remove-project name="LineageOS/android_packages_apps_Jelly" />
 	<project name="platform/packages/apps/Browser2" path="packages/apps/Browser2" remote="aosp" revision="pie-release" />
+
+	<!-- Snap camera -->
+	<project name="LineageOS/android_packages_apps_Snap" path="packages/apps/Snap" remote="github" revision="lineage-16.0" />
 
 </manifest>
