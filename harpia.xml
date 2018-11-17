@@ -16,8 +16,6 @@
 	<project name="LineageOS/android_external_bson" path="external/bson" remote="github" revision="lineage-15.1" />
 
 	<!-- LOS Staging repos -->
-        <project path="packages/overlays/Lineage" name="LineageOS/android_packages_overlays_Lineage" />
-
         <project path="system/qcom" name="LineageOS/android_system_qcom" groups="qcom" remote="github" revision="lineage-15.1" />
 
 	<!-- Fixes missing deps in "display-caf" -->
@@ -36,17 +34,9 @@
 	<remove-project name="LineageOS/android_hardware_qcom_audio" />
 	<project name="PixysOS/hardware_qcom_audio" path="hardware/qcom/audio-caf/msm8916" remote="github" revision="pie-msm8916" />
 
-	<!-- Fixes missing deps in "tinycompress" -->
-	<remove-project name="LineageOS/android_external_tinycompress" />
-	<project name="PixysOS/external_tinycompress" path="external/tinycompress" remote="github" revision="pie" />
-
 	<!-- Fixes for errors in softap -->
 	<remove-project name="LineageOS/android_system_qcom" />
 	<project name="Harpia-development/android_system_qcom" path="system/qcom" remote="github" revision="lineage-16.0" />	
-
-	<!-- Jelly webview is mostly broken, switch to Browser2. -->
-	<remove-project name="LineageOS/android_packages_apps_Jelly" />
-	<project name="platform/packages/apps/Browser2" path="packages/apps/Browser2" remote="aosp" revision="pie-release" />
 
 	<!-- Snap camera -->
 	<project name="LineageOS/android_packages_apps_Snap" path="packages/apps/Snap" remote="github" revision="lineage-16.0" />
