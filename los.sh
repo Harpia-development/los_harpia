@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 ########################################
-#  LineageOS automatic clone and build script
+#  Android ROM automatic clone and build script
 ########################################
 #
 #  Author: Facundo Montero <facumo.fm@gmail.com>
@@ -17,7 +17,8 @@ ROM_NAME='LineageOS'
 ROM_VERSION='16.0'
 ROM_LUNCH='lineage' # Used in "lunch lineage_device-userdebug" and "brunch lineage_device-userdebug"
 BUILD_DATE=$(date '+%Y-%m-%d_%H-%M-%S')
-LOG_PATH="$WORKING_DIR"'/../'"$ROM_NAME"'_'"$ROM_VERSION"'_'"$BUILD_DATE"'.txt'
+LOG_FILENAME="$ROM_NAME"'_'"$ROM_VERSION"'_'"$BUILD_DATE"'.txt'
+LOG_PATH="$WORKING_DIR"'/../'
 MANIFEST_URL='https://raw.githubusercontent.com/Harpia-development/los_harpia/master/harpia.xml'
 SIGNBUILD_URL='https://raw.githubusercontent.com/FacuM/shellscripts/master/android/signbuild.sh'
 BREAKFAST_DEVICE='harpia'
@@ -31,7 +32,8 @@ SIGN='yes'
 # This script must be run from the source shell, if not, crash.
 if [ "${BASH_SOURCE[0]}" == "${0}" ]
 then
- echo 'This script must be run from the source shell.
+ echo '
+This script must be run from the source shell.
 
 Usage:
        . los.sh [reset]|[clobber]
@@ -51,9 +53,26 @@ else
  REPO_SYNC_OPTS="$REPO_SYNC_OPTS""$REPO_SYNC_THREADS"
 fi
 
+# Check if $LOG_PATH is writable
+touch "$LOG_PATH"'.test'
+if [ $? -ne 0 ]
+then
+ echo '
+===================================
+I             WARNING             I
+I                                 I
+I  Log path not writable.         I
+I  Will not log anything.         I
+==================================='
+ LOG_PATH='/dev/null'
+else
+ rm "$LOG_PATH"'.test'
+ LOG_PATH="$LOG_PATH""$LOG_FILENAME"
+ echo '=> Enabled logging!' | tee -a $LOG_PATH
+fi
+
 # Prepare the working directory.
 echo '=> Preparing...' | tee -a $LOG_PATH
-# It's ~/los16.
 if [ "$1" == 'reset' ]
 then
  echo '
