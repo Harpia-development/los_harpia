@@ -20,6 +20,7 @@ BUILD_DATE=$(date '+%Y-%m-%d_%H-%M-%S')
 LOG_FILENAME="$ROM_NAME"'_'"$ROM_VERSION"'_'"$BUILD_DATE"'.txt'
 LOG_PATH="$WORKING_DIR"'/../'
 MANIFEST_URL='https://raw.githubusercontent.com/Harpia-development/los_harpia/master/harpia.xml'
+SIGN=1
 SIGNBUILD_URL='https://raw.githubusercontent.com/FacuM/shellscripts/master/android/signbuild/signbuild.sh'
 BREAKFAST_DEVICE='harpia'
 REPO_INIT_OPTS='--depth=1 --no-clone-bundle'
@@ -27,7 +28,6 @@ REPO_SYNC_OPTS='--force-sync --force-broken --current-branch --no-tags --no-clon
 # REPO_SYNC_THREADS can be 'auto' or integer
 REPO_SYNC_THREADS=32
 # Signed build?
-SIGN='yes'
 
 # This script must be run from the source shell, if not, crash.
 if [ "${BASH_SOURCE[0]}" == "${0}" ]
@@ -110,7 +110,7 @@ then
     make -j$(nproc --all) clobber
    fi
    echo '=> Building...' | tee -a $LOG_PATH
-   if [ "$SIGN" == 'yes' ]
+   if [ $SIGN -eq 1 ]
    then
     echo 'Will now try to use private signature on this build.' | tee -a $LOG_PATH
     if [ ! -f ~/signbuild.sh ]
