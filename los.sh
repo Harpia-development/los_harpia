@@ -20,7 +20,7 @@ BUILD_DATE=$(date '+%Y-%m-%d_%H-%M-%S')
 LOG_FILENAME="$ROM_NAME"'_'"$ROM_VERSION"'_'"$BUILD_DATE"'.txt'
 LOG_PATH="$WORKING_DIR"'/../'
 MANIFEST_URL='https://raw.githubusercontent.com/Harpia-development/los_harpia/master/harpia.xml'
-SIGNBUILD_URL='https://raw.githubusercontent.com/FacuM/shellscripts/master/android/signbuild.sh'
+SIGNBUILD_URL='https://raw.githubusercontent.com/FacuM/shellscripts/master/android/signbuild/signbuild.sh'
 BREAKFAST_DEVICE='harpia'
 REPO_INIT_OPTS='--depth=1 --no-clone-bundle'
 REPO_SYNC_OPTS='--force-sync --force-broken --current-branch --no-tags --no-clone-bundle --optimized-fetch --prune'
