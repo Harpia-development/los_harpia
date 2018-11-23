@@ -18,6 +18,12 @@
 	<!-- LOS Staging repos -->
         <project path="system/qcom" name="LineageOS/android_system_qcom" groups="qcom" remote="github" revision="lineage-15.1" />
 
+	<!-- FM Radio -->
+	<remove-project name="LineageOS/android_hardware_qcom_fm" />
+        <project name="PixelExperience/hardware_qcom_fm" path="hardware/qcom/fm" remote="github" revision="pie" />
+	<remove-project name="LineageOS/android_packages_apps_FMRadio" />
+	<project name="PixelExperience/packages_apps_FMRadio" path="packages/apps/FMRadio" remote="github" revision="pie" />
+
 	<!-- Fixes missing deps in "display-caf" -->
 	<remove-project name="LineageOS/android_hardware_qcom_display" />
 	<project name="PixysOS/hardware_qcom_display" path="hardware/qcom/display-caf/msm8916" remote="github" revision="pie-msm8916" />
@@ -37,8 +43,5 @@
 	<!-- Fixes for errors in softap -->
 	<remove-project name="LineageOS/android_system_qcom" />
 	<project name="Harpia-development/android_system_qcom" path="system/qcom" remote="github" revision="lineage-16.0" />	
-
-	<!-- Snap camera -->
-	<project name="LineageOS/android_packages_apps_Snap" path="packages/apps/Snap" remote="github" revision="lineage-16.0" />
 
 </manifest>
