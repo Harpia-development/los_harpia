@@ -14,7 +14,7 @@ You can grab some links from the [XDA thread](https://forum.xda-developers.com/g
 Build Instructions
 ------------------
 
-- Automatic compilation
+#### Automatic compilation
 
 Download the script
 
@@ -38,7 +38,7 @@ Or you can just clean the old compilation and build it all again.
 
 	. ~/los.sh clobber
 
-- Manual compilation
+#### Manual compilation
 
 Create a build directory
 
