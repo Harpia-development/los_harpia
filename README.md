@@ -69,3 +69,8 @@ Now start the build...
 	brunch harpia   or   mka otapackage
 
 Please see the [LineageOS WIKI](https://wiki.lineageos.org/) for further information.
+
+Resources
+---------
+
+- Understanding bash sourcing: [How to detect if a script is being sourced - Stack Overflow](https://stackoverflow.com/questions/2683279/how-to-detect-if-a-script-is-being-sourced)
