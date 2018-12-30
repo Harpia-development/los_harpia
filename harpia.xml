@@ -18,11 +18,23 @@
 	<!-- LOS Staging repos -->
         <project path="system/qcom" name="LineageOS/android_system_qcom" groups="qcom" remote="github" revision="lineage-15.1" />
 
+	<!-- LinageOS custom policies (fixes camera) -->
+	<remove-project name="LineageOS/android_device_lineage_sepolicy" />
+	<project name="Harpia-development/android_device_lineage_sepolicy" path="device/lineage/sepolicy" remote="github" revision="lineage-16.0" />
+
 	<!-- FM Radio -->
 	<remove-project name="LineageOS/android_hardware_qcom_fm" />
         <project name="PixelExperience/hardware_qcom_fm" path="hardware/qcom/fm" remote="github" revision="pie" />
 	<remove-project name="LineageOS/android_packages_apps_FMRadio" />
 	<project name="PixelExperience/packages_apps_FMRadio" path="packages/apps/FMRadio" remote="github" revision="pie" />
+
+	<!-- Fixes "Failed to acquire lock" - tracking LineageOS -->
+	<remove-project name="LineageOS/android_hardware_qcom_power" />
+	<project name="Harpia-development/android_hardware_qcom_power" path="hardware/qcom/power" remote="github" revision="lineage-16.0" />
+
+	<!-- Fixes crashes during boot due to missing WebView -->
+	<remove-project name="LineageOS/android_frameworks_base" />
+	<project name="Harpia-development/android_frameworks_base" path="frameworks/base" remote="github" revision="lineage-16.0" />
 
 	<!-- Fixes missing deps in "display-caf" -->
 	<remove-project name="LineageOS/android_hardware_qcom_display" />
