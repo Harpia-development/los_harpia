@@ -4,7 +4,7 @@
 	<!-- Device -->
 	<project name="Harpia-development/device_motorola_harpia" path="device/motorola/harpia" remote="github" revision="9" />
 	<project name="Harpia-development/device_motorola_msm8916-common" path="device/motorola/msm8916-common" remote="github" revision="9" />
-	<project name="Harpia-development/kernel_harpia.git" path="kernel/motorola/msm8916" remote="github" revision="9" />
+	<project name="Harpia-development/kernel_harpia.git" path="kernel/motorola/msm8916" remote="github" revision="9_backup" />
 	<project name="Harpia-development/vendor_motorola" path="vendor/motorola" remote="github" revision="pie" />
 
 
