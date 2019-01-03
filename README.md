@@ -18,25 +18,25 @@ Build Instructions
 
 Download the script
 
-	wget -q https://raw.githubusercontent.com/Harpia-development/los_harpia/master/los.sh -O ~/los.sh
+	wget -q https://raw.githubusercontent.com/FacuM/shellscripts/master/android/buildrom/examples/los_harpia.sh -O ~/los_harpia.sh
 
 Edit the variables at the top to your liking
 
-	vi ~/los.sh   or   nano ~/los.sh
+	vi ~/los_harpia.sh   or   nano ~/los_harpia.sh
 
 ![Variables to edit](https://i.imgur.com/6gqS7sn.png)
 
 Then begin the build, syncing source and just building what you need.
 
-	. ~/los.sh
+	. ~/los_harpia.sh
 
 If you want to remove the old source, you can run it like this.
 
-	. ~/los.sh reset
+	. ~/los_harpia.sh reset
 
 Or you can just clean the old compilation and build it all again.
 
-	. ~/los.sh clobber
+	. ~/los_harpia.sh clobber
 
 #### Manual compilation
 
