@@ -15,9 +15,6 @@
 	<project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="lineage-15.1" />
 	<project name="LineageOS/android_external_bson" path="external/bson" remote="github" revision="lineage-15.1" />
 
-	<!-- LOS Staging repos -->
-        <project path="system/qcom" name="LineageOS/android_system_qcom" groups="qcom" remote="github" revision="lineage-15.1" />
-
 	<!-- LinageOS custom policies (fixes camera) -->
 	<remove-project name="LineageOS/android_device_lineage_sepolicy" />
 	<project name="Harpia-development/android_device_lineage_sepolicy" path="device/lineage/sepolicy" remote="github" revision="lineage-16.0" />
@@ -53,7 +50,6 @@
 	<project name="PixysOS/hardware_qcom_audio" path="hardware/qcom/audio-caf/msm8916" remote="github" revision="pie-msm8916" />
 
 	<!-- Fixes for errors in softap -->
-	<remove-project name="LineageOS/android_system_qcom" />
 	<project name="Harpia-development/android_system_qcom" path="system/qcom" remote="github" revision="lineage-16.0" />	
 
 </manifest>
