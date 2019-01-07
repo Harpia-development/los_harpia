@@ -29,10 +29,6 @@
 	<remove-project name="LineageOS/android_hardware_qcom_power" />
 	<project name="Harpia-development/android_hardware_qcom_power" path="hardware/qcom/power" remote="github" revision="lineage-16.0" />
 
-	<!-- Fixes crashes during boot due to missing WebView -->
-	<remove-project name="LineageOS/android_frameworks_base" />
-	<project name="Harpia-development/android_frameworks_base" path="frameworks/base" remote="github" revision="lineage-16.0" />
-
 	<!-- Fixes missing deps in "display-caf" -->
 	<remove-project name="LineageOS/android_hardware_qcom_display" />
 	<project name="PixysOS/hardware_qcom_display" path="hardware/qcom/display-caf/msm8916" remote="github" revision="pie-msm8916" />
