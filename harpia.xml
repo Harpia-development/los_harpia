@@ -8,8 +8,8 @@
 	<project name="Harpia-development/vendor_motorola" path="vendor/motorola" remote="github" revision="pie" />
 
 
-	<!-- Linaro 7.3 kernel toolchain -->
-	<project name="dev-harsh1998/GCC_BUILDS" path="prebuilts/gcc/linux-x86/arm/arm-eabi-7.3" remote="github" revision="master" />
+	<!-- GNU GCC 9.0 kernel toolchain -->
+	<project name="Harpia-development/android_prebuilts_gcc_linux-x86_arm_arm-linux-gnueabi-9.0" path="prebuilts/gcc/linux-x86/arm/arm-linux-gnueabi-9.0" remote="github" revision="master" />
 	
 	<!-- Boringssl -->
 	<project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="lineage-15.1" />
