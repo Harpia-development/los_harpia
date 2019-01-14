@@ -35,7 +35,7 @@
 
 	<!-- Fixes missing deps in "display-caf" -->
 	<remove-project name="LineageOS/android_hardware_qcom_display" />
-	<project name="PixysOS/hardware_qcom_display" path="hardware/qcom/display-caf/msm8916" remote="github" revision="pie-msm8916" />
+	<project name="Harpia-development/hardware_qcom_display" path="hardware/qcom/display-caf/msm8916" remote="github" revision="pie-msm8916" />
 
 	<!-- Fixes missing deps in "bt-caf" -->
 	<remove-project name="LineageOS/android_hardware_qcom_bt" />
