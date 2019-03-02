@@ -12,7 +12,6 @@
 	<project name="Harpia-development/android_prebuilts_gcc_linux-x86_arm_arm-linux-gnueabi-9.0" path="prebuilts/gcc/linux-x86/arm/arm-linux-gnueabi-9.0" remote="github" revision="master" />
 	
 	<!-- Boringssl -->
-	<project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="lineage-15.1" />
 	<project name="LineageOS/android_external_bson" path="external/bson" remote="github" revision="lineage-15.1" />
 
 	<!-- FM Radio -->
