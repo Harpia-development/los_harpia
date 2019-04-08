@@ -10,6 +10,10 @@
 
 	<!-- GNU GCC 9.0 kernel toolchain -->
 	<project name="Harpia-development/android_prebuilts_gcc_linux-x86_arm_arm-linux-gnueabi-9.0" path="prebuilts/gcc/linux-x86/arm/arm-linux-gnueabi-9.0" remote="github" revision="master" />
+
+	<!-- SELinux -->
+	<remove-project name="LineageOS/android_device_qcom_sepolicy-legacy" />
+	<project name="Harpia-development/android_device_qcom_sepolicy-legacy" path="device/qcom/sepolicy-legacy" remote="github" revision="lineage-16.0" />
 	
 	<!-- Boringssl -->
 	<project name="LineageOS/android_external_bson" path="external/bson" remote="github" revision="lineage-15.1" />
