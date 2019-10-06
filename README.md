@@ -1,5 +1,5 @@
 
-Lineage 17.0 for Osprey
+Lineage 17.0 for harpia
 =======================
 
 Current Status
@@ -41,7 +41,7 @@ Now create a local_manifests directory
 
     mkdir .repo/local_manifests
 
-Copy my local manifest 'osprey.xml' to the 'local_manifests' directory.
+Copy my local manifest 'harpia.xml' to the 'local_manifests' directory.
 
 Then to sync up:
 
@@ -64,7 +64,7 @@ $
 # ...and run to prepare our devices list
 $ . build/envsetup.sh
 # ... now run
-$ brunch osprey
+$ brunch harpia
 ```
 
 Please see the [LineageOS Wiki](https://wiki.lineageos.org/) for further information.

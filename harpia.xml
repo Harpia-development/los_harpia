@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote fetch="https://github.com/Harpia-development" name="harpia"/>
+
+        <!-- Device -->
+
+	<project name="device_motorola_harpia" path="device/motorola/harpia" remote="harpia" revision="lineage-17.0" />
+	<project name="device_motorola_msm8916-common" path="device/motorola/msm8916-common" remote="harpia" revision="10" />
+	<project name="kernel_motorola_msm8916" path="kernel/motorola/msm8916" remote="harpia" revision="q_cust" />
+	<project name="vendor_motorola" path="vendor/motorola" remote="harpia" revision="q" />
+
+        <!-- ROM -->
+	<project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" revision="lineage-17.0" />
+	<project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="lineage-17.0" />
+	<project name="LineageOS/android_system_qcom" path="system/qcom" groups="qcom" remote="github" revision="lineage-16.0" />
+
+	<!-- GNU GCC 9.0 kernel toolchain -->
+	<project name="Harpia-development/android_prebuilts_gcc_linux-x86_arm_arm-linux-gnueabi-9.0" path="prebuilts/gcc/linux-x86/arm/arm-linux-gnueabi-9.0" remote="github" revision="master" />
+        
+	<!-- Boringssl -->
+	<project name="LineageOS/android_external_bson" path="external/bson" remote="github" revision="lineage-15.1" />
+
+	<!-- SELinux -->
+	<project name="Harpia-development/android_device_qcom_sepolicy-legacy" path="device/qcom/sepolicy-legacy" remote="github" revision="magma_ten" />
+</manifest>
