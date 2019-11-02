@@ -23,8 +23,9 @@
 	<!-- SELinux -->
 	<project name="Harpia-development/android_device_qcom_sepolicy-legacy" path="device/qcom/sepolicy-legacy" remote="github" revision="magma_ten" />
 
-	<!-- AOSP FM -->
-	<remove-project name="LineageOS/android_vendor_qcom_opensource_fm-commonsys" />
-	<project path="packages/apps/FMRadio" name="LineageOS/android_packages_apps_FMRadio" />
-	<project path="vendor/qcom/opensource/libfmjni" name="LineageOS/android_vendor_qcom_opensource_libfmjni" groups="qcom,pdk-qcom" />
+	<!-- Snap -->
+	<project name="LineageOS/android_packages_apps_Snap" path="packages/apps/Snap" remote="github" revision="lineage-17.0" />
+
+	<!-- Sepolicy -->
+	<project path="device/lineage/sepolicy" name="LineageOS/android_device_lineage_sepolicy" remote="github" revision="lineage-17.0" />
 </manifest>
