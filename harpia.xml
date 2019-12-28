@@ -18,4 +18,8 @@
         
 	<!-- Boringssl -->
 	<project name="LineageOS/android_external_bson" path="external/bson" remote="github" revision="lineage-15.1" />
+
+	<!-- SELinux -->
+	<remove-project name="LineageOS/android_device_qcom_sepolicy" />
+	<project name="android_device_qcom_sepolicy-legacy" path="device/qcom/sepolicy-legacy" remote="harpia" revision="lineage-17.0" />
 </manifest>
